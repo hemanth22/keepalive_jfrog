@@ -40,5 +40,5 @@ jobs:
         env:
           originaljfrogdetails: ${{ secrets.PIPREMOTE_JFROG }}
 
-      - name: Execute playbook
-        run: pip3 install requests
+      - name: Install python modules
+        run: pip3 install tabulate
