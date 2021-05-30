@@ -34,11 +34,8 @@ jobs:
         run: |
           sudo apt install ansible -y
           sudo ansible-galaxy install hemanth22.pipproxy
-      
-      - name: Play the ansible playbook
-        uses: ./.github/actions/ansible
-        with: 
-          playbook: pipproxy.yml
-          inventory: localhost
+          
+      - name: Install ansible and downloading pipproxy
+        run: ansible-playbook pipproxy.yml
         env:
           originaljfrogdetails: ${{ secrets.PIPREMOTE_JFROG }}
