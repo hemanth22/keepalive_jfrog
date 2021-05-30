@@ -32,10 +32,13 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install ansible and downloading pipproxy
         run: |
-          sudo apt install ansible -y
+          sudo apt install ansible python3-pip -y
           ansible-galaxy install hemanth22.pipproxy
           
       - name: Execute playbook
         run: ansible-playbook pipproxy.yml
         env:
           originaljfrogdetails: ${{ secrets.PIPREMOTE_JFROG }}
+
+      - name: Execute playbook
+        run: pip3 install requests
