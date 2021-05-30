@@ -33,9 +33,9 @@ jobs:
       - name: Install ansible and downloading pipproxy
         run: |
           sudo apt install ansible -y
-          sudo ansible-galaxy install hemanth22.pipproxy
+          ansible-galaxy install hemanth22.pipproxy
           
-      - name: Install ansible and downloading pipproxy
+      - name: Execute playbook
         run: ansible-playbook pipproxy.yml
         env:
           originaljfrogdetails: ${{ secrets.PIPREMOTE_JFROG }}
