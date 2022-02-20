@@ -41,3 +41,12 @@ jobs:
 
       - name: Install python modules
         run: pip3 install -r requirements.txt
+
+      - name: Python version modules
+        run: python3 -V
+
+      - name: pip version modules
+        run: pip3 -V
+
+      - name: pip list modules
+        run: pip3 list
