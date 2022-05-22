@@ -52,3 +52,6 @@ jobs:
 
       - name: pip list modules
         run: pip3 list
+      
+      - name: Email job completion
+        run: python3 sendingmail.py
