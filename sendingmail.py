@@ -40,7 +40,7 @@ message.attach(part1)
 message.attach(part2)
 # send your email
 with smtplib.SMTP_SSL(smtp_server,port) as mailserver:
-    mailserver.login(USER_EMAIL, USER_PASSWORD)
+    mailserver.login(USER_EMAIL,USER_PASSWORD)
     mailserver.sendmail(
         sender_email, receiver_email, message.as_string()
     )
