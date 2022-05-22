@@ -52,3 +52,10 @@ jobs:
 
       - name: pip list modules
         run: pip3 list
+      
+      - name: Email job completion
+        run: python3 sendingmail.py
+        env:
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+          SMTP_ADDRESS: ${{ secrets.SMTP_ADDRESS }}

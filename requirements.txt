@@ -3,3 +3,4 @@ requests
 tabulate
 pytz
 python-dateutil
+django-smtp-ssl
