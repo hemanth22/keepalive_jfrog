@@ -4,3 +4,4 @@ tabulate
 pytz
 python-dateutil
 django-smtp-ssl
+telepot

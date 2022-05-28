@@ -59,3 +59,9 @@ jobs:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
           SMTP_ADDRESS: ${{ secrets.SMTP_ADDRESS }}
+
+      - name: telegram job completion
+        run: python3 bot.py
+        env:
+          TELE_CHANNEL: ${{ secrets.TELE_CHANNEL }}
+          CHATTER_ID: ${{ secrets.CHATTER_ID }}
